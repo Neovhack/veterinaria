@@ -3,6 +3,7 @@ import image from '../../assets/carrito.png';
 
 function CartWidget() {
     return (
+        //Carrito
         <img src={image} alt="Carrito" />
     )
 }

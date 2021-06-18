@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardList from "./CardList"
 
 function ItemListContainer(prop) {
+    //Array simulando datos json
     const productos = [{
         id: 1,
         name: "Pedigree Adult",
@@ -18,6 +19,7 @@ function ItemListContainer(prop) {
         price: 1200,
         pictureURL: "https://puppis.vteximg.com.br/arquivos/ids/172576-600-600/156182-1.jpg?v=637350102395730000"
     }]
+    //Promesa para traer datos de apis
     const [data, setData] = useState(null);
     useEffect(() => {
         function getItems() {
@@ -37,13 +39,13 @@ function ItemListContainer(prop) {
     }, [])
 
 
-    return (     
+    return (
         <>
-        <div>
-            <h4 className="textCenter"> {prop.saludo} </h4>
-            <CardList data= {data}/>   
-                          
-        </div>
+            <div>
+                <h4 className="textCenter"> {prop.saludo} </h4>
+                <CardList data={data} />
+
+            </div>
         </>
     )
 }

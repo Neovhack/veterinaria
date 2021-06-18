@@ -1,12 +1,12 @@
 import React from 'react'
-import CardListPokemon from "../components/ItemlistContainer/CardListPokemon"
 import ItemListContainer from "../components/ItemlistContainer/ItemListContainer"
 
 function Products() {
     return (
+        //Pagina de lista de productos
         <div>
-            <ItemListContainer/>
-            <CardListPokemon/>
+            <ItemListContainer />
+
         </div>
     )
 }

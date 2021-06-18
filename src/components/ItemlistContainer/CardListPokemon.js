@@ -1,6 +1,7 @@
 import { div } from "prelude-ls";
 import React, { useEffect, useState } from "react";
-
+//Fetch para desafio
+/*
 function CardListPokemon() {
     const [data, setData] = useState(null);
     useEffect(() => {
@@ -15,11 +16,11 @@ function CardListPokemon() {
                 data !== null ?
                     data.map((data, index) =>{ return <p key={index}>{data.name}</p>}) :
                     console.log("cargando")
-                
+
             }
         </div>
     )
 }
 
 
-export default CardListPokemon;
+export default CardListPokemon;*/

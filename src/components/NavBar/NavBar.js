@@ -5,10 +5,11 @@ import { Link, NavLink } from "react-router-dom"
 
 export default function NavBar() {
   return (
+    //NavBar con rutas
     <Navbar bg="primary" variant="dark">
-     <NavLink className="prueba" exact to="/">Home</NavLink>
+      <NavLink className="navBar" exact to="/">Home</NavLink>
       <Nav className="mr-auto">
-        <NavLink  className="prueba" to="/Products">Products</NavLink>
+        <NavLink className="navBar" to="/Products">Products</NavLink>
       </Nav>
       <Button variant="outline-light"> <CartWidget /></Button>
     </Navbar>
