@@ -1,8 +1,10 @@
 import React from "react";
 import { Card, Container, Row, Col } from 'react-bootstrap';
+import { Link, NavLink, useParams } from "react-router-dom"
 
 function CardList(props) {
     const data = props.data;
+    const {itemId} = useParams();
     return (
         <>
             <Container>
@@ -13,7 +15,7 @@ function CardList(props) {
                                 return (
                                     <Col key={index}>
                                         <Card id={data.id} style={{ width: '18rem' }}>
-                                            <Card.Img variant="top" src={data.pictureURL} />
+                                       <NavLink to="/Products/1" > <Card.Img variant="top" src={data.pictureURL}/> </NavLink>
                                             <Card.Body>
                                                 <Card.Title>{data.name}</Card.Title>
                                                 <Card.Text>

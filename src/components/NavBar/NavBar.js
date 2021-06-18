@@ -1,17 +1,16 @@
 import React from 'react';
-import {Navbar, Nav, Button} from 'react-bootstrap';
+import { Navbar, Nav, Button, } from 'react-bootstrap';
 import CartWidget from './CartWidget'
+import { Link, NavLink } from "react-router-dom"
 
 export default function NavBar() {
-    return (
-      <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home">Pagina Principal</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Tienda</Nav.Link>
-          <Nav.Link href="#features">Informacion</Nav.Link>
-          <Nav.Link href="#pricing">Contactenos</Nav.Link>
-        </Nav>
-          <Button variant="outline-light"> <CartWidget/></Button>
-      </Navbar>
-    )
+  return (
+    <Navbar bg="primary" variant="dark">
+     <NavLink className="prueba" exact to="/">Home</NavLink>
+      <Nav className="mr-auto">
+        <NavLink  className="prueba" to="/Products">Products</NavLink>
+      </Nav>
+      <Button variant="outline-light"> <CartWidget /></Button>
+    </Navbar>
+  )
 }

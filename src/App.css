@@ -1,3 +1,9 @@
 .textCenter {
     text-align: center;
 }
+.prueba {
+    color:black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
