@@ -2,15 +2,18 @@
     "id": 1,
     "name": "Pedigree Adult",
     "price": 700,
-    "pictureURL": "https://www.mitiendademascotas.com/web/elbolson/wp-content/uploads/sites/13/2017/10/Pedigree-carne-pc.jpg"
+    "pictureURL": "https://www.mitiendademascotas.com/web/elbolson/wp-content/uploads/sites/13/2017/10/Pedigree-carne-pc.jpg",
+    "cantidad" : 0
 }, {
     "id": 2,
     "name": "Dog Chow Adult",
-    "price2": 800,
-    "pictureURL": "https://ardiaprod.vteximg.com.br/arquivos/ids/184630-500-500/Alimento-para-Perros-Dog-Chow-MedianosGrandes-3-Kg-_1.jpg?v=637427547244730000"
+    "price": 800,
+    "pictureURL": "https://ardiaprod.vteximg.com.br/arquivos/ids/184630-500-500/Alimento-para-Perros-Dog-Chow-MedianosGrandes-3-Kg-_1.jpg?v=637427547244730000",
+    "cantidad" : 0
 }, {
     "id": 3,
     "name": "Royal Canin Indoor",
     "price": 1200,
-    "pictureURL": "https://puppis.vteximg.com.br/arquivos/ids/172576-600-600/156182-1.jpg?v=637350102395730000"
+    "pictureURL": "https://puppis.vteximg.com.br/arquivos/ids/172576-600-600/156182-1.jpg?v=637350102395730000",
+    "cantidad" : 0
 }]

@@ -2,25 +2,10 @@ import React, { useContext, useState, useEffect, createContext } from 'react'
 import { Card, Container, Row, Col, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { NavLink } from "react-router-dom"
 import { dataContext } from './ItemListContainer';
-
+import Counter from "./Counter"
 
 function CardList() {
     const data = useContext(dataContext);
-    const [counter, setCounter] = useState(0);
-    const [disabler, setDisabler] = useState(true)
-
-    function handleClickSuma() {
-        setCounter(prevCounter => prevCounter + 1);
-    }
-    function handleClickResta() {
-        if (counter > 0) {
-            setCounter(prevCounter => prevCounter - 1)
-        }
-
-    }
-    useEffect(() => {
-        counter > 0 ? setDisabler(false) : setDisabler(true)
-    }, [counter])
 
     return (
         //map que muestra todos los datos traidos de la API
@@ -39,22 +24,7 @@ function CardList() {
                                       </Card.Body>
                                       <ListGroup className="list-group-flush">
                                         <ListGroupItem>{dato.price}</ListGroupItem>
-                                        <ListGroupItem>
-                                          <Button onClick={handleClickSuma} variant="light">
-                                            {" "}
-                                            +{" "}
-                                          </Button>{" "}
-                                          {counter}{" "}
-                                          <Button onClick={handleClickResta} variant="light">
-                                            {" "}
-                                            -{" "}
-                                          </Button>
-                                          <NavLink exact to={"/Products/ProductsDetail/" + dato.id}>
-                                            <Button variant="primary" disabled={disabler}>
-                                              Comprar
-                                            </Button>
-                                          </NavLink>
-                                        </ListGroupItem>
+                                        <Counter dato={dato}/>
                                       </ListGroup>
                                     </Card>
                                   </Col>
@@ -70,4 +40,3 @@ function CardList() {
 
 
 export default CardList
-

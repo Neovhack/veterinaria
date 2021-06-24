@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Products from '../pages/Products'
 import NavBar from "../components/NavBar/NavBar"
 import ProductsDetail from '../components/ItemlistContainer/ProductsDetail'
+import CartContext from "../components/ItemlistContainer/CartContext"
 
 export default function AppRouter() {
     return (
@@ -14,6 +15,7 @@ export default function AppRouter() {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/Products" component={Products} />
                 <Route path="/Products/ProductsDetail/:itemId" component={ProductsDetail} />
+                <Route path="/Products/CartContext/:itemId" component={CartContext}/>
             </Switch>
         </Router>
     )

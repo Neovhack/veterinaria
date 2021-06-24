@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import { Link, NavLink, useParams } from "react-router-dom"
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import React from 'react'
+import { NavLink, useParams } from "react-router-dom"
+import { Card, Container, Row, Col, Button, ListGroupItem } from 'react-bootstrap';
 import dataProductos from "../../datosProductos.json"
 
 
 function ProductsDetail() {
     //Traigo datos del producto seleccionado
-   const {itemId} = useParams();
-   const datosItem = dataProductos.find(elemento => elemento.id == itemId )
+    const { itemId } = useParams();
+    const datosItem = dataProductos.find(elemento => elemento.id == itemId)
     return (
         //HTML del producto seleccionado
         <Container>
@@ -21,6 +21,13 @@ function ProductsDetail() {
                                 {datosItem.price}
                             </Card.Text>
                         </Card.Body>
+                        <ListGroupItem>
+                            <NavLink exact to={"/Products/CartContext/" + datosItem.id}>
+                                <Button variant="primary">
+                                    Comprar
+                                </Button>
+                            </NavLink>
+                        </ListGroupItem>
                     </Card>
                 </Col>
             </Row>
