@@ -5,8 +5,7 @@ function Products() {
     return (
         //Pagina de lista de productos
         <div>
-            <ItemListContainer />
-
+            <ItemListContainer/>
         </div>
     )
 }

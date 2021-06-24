@@ -1,19 +1,17 @@
 import React, { useContext } from 'react'
 import { Link, NavLink, useParams } from "react-router-dom"
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import { dataSelected } from "./CardList"
+import dataProductos from "../../datosProductos.json"
 
 
 function ProductsDetail() {
     //Traigo datos del producto seleccionado
-   const itemSelected = useContext(dataSelected);
    const {itemId} = useParams();
-   console.log(itemSelected);
+   const datosItem = dataProductos.find(elemento => elemento.id == itemId )
     return (
         //HTML del producto seleccionado
-        
         <Container>
-          { /*  <Row>
+            <Row>
                 <Col>
                     <Card id={datosItem.id} style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={datosItem.pictureURL} />
@@ -25,7 +23,7 @@ function ProductsDetail() {
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>*/}
+            </Row>
         </Container>
     )
 }
