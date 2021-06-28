@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { createContext } from 'react';
 import CardList from "./CardList"
 import dataProductos from "../../datosProductos.json"
 export const dataContext = createContext();

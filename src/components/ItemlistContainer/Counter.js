@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { Card, Container, Row, Col, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
+import React, { useState, useEffect, createContext } from 'react'
+import { ListGroupItem, Button } from 'react-bootstrap';
 import { NavLink } from "react-router-dom"
+import CartContext from "./CartContext"
 
 function Counter(props) {
     const [counter, setCounter] = useState(0);
@@ -15,6 +16,7 @@ function Counter(props) {
         }
     }
 
+    
     useEffect(() => {
         counter > 0 ? setDisabler(false) : setDisabler(true)
     }, [counter])
@@ -35,6 +37,7 @@ function Counter(props) {
                     Comprar
                 </Button>
             </NavLink>
+           
         </ListGroupItem>
     )
 }

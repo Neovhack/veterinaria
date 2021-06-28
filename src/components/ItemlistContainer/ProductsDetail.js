@@ -1,13 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { NavLink, useParams } from "react-router-dom"
 import { Card, Container, Row, Col, Button, ListGroupItem } from 'react-bootstrap';
 import dataProductos from "../../datosProductos.json"
+import CartContext from "./CartContext"
+//import exportQuantity from "./CardList"
 
 
 function ProductsDetail() {
     //Traigo datos del producto seleccionado
     const { itemId } = useParams();
     const datosItem = dataProductos.find(elemento => elemento.id == itemId)
+   // const importQuantity = useContext(exportQuantity);
+    //console.log(importQuantity);
     return (
         //HTML del producto seleccionado
         <Container>
@@ -29,6 +33,7 @@ function ProductsDetail() {
                             </NavLink>
                         </ListGroupItem>
                     </Card>
+                    <CartContext/>
                 </Col>
             </Row>
         </Container>
