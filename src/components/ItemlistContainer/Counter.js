@@ -1,43 +1,32 @@
-import React, { useState, useEffect, createContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ListGroupItem, Button } from 'react-bootstrap';
-import { NavLink } from "react-router-dom"
-import CartContext from "./CartContext"
+import { UseCart } from "./CartContext"
 
 function Counter(props) {
-    const [counter, setCounter] = useState(0);
-    const [disabler, setDisabler] = useState(true)
-
+    const { cart } = UseCart();
+    const handleQuantity = cart.find(element => element.id == props.dato.id)
+  
     function handleClickSuma() {
-        setCounter(prevCounter => prevCounter + 1);
+        handleQuantity.quantity = handleQuantity.quantity + 1
     }
     function handleClickResta() {
-        if (counter > 0) {
-            setCounter(prevCounter => prevCounter - 1)
+        if (handleQuantity.quantity > 0) {
+            handleQuantity.quantity = handleQuantity.quantity - 1
         }
     }
-
     
-    useEffect(() => {
-        counter > 0 ? setDisabler(false) : setDisabler(true)
-    }, [counter])
-
+ 
     return (
-        <ListGroupItem>
+        <ListGroupItem className="mx-auto">
             <Button onClick={handleClickSuma} variant="light">
                 {" "}
                 +{" "}
             </Button>{" "}
-            {counter}{" "}
+            {handleQuantity.quantity}{" "}
             <Button onClick={handleClickResta} variant="light">
                 {" "}
                 -{" "}
             </Button>
-            <NavLink exact to={"/Products/ProductsDetail/" + props.dato.id}>
-                <Button variant="primary" disabled={disabler}>
-                    Comprar
-                </Button>
-            </NavLink>
-           
         </ListGroupItem>
     )
 }
