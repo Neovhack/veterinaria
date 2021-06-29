@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AppRouter from "./routers/AppRouter";
-import {CartContext}   from "./components/ItemlistContainer/CartContext"
+import {CartContext}   from "./Provider/CartContext"
 
 function App() {
   return (

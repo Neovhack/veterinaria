@@ -38,22 +38,3 @@ export function CartContext({ children }) {
 
 export default CartContext
 
-
-
-
-{/*
-
-
-const { itemId } = useParams()
-const datosItem = arrProducts.find(elemento => elemento.id == itemId)
-
-const selectedProducts = {};
-                 
-function saveProduct(obj, quant) { 
-        selectedProducts.item = obj;
-        selectedProducts.quantity = quant;
-    }
-
-    //saveProduct(datosItem ,cantidad)
-    // console.log(selectedProducts);
-*/}

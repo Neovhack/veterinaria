@@ -1,7 +1,6 @@
 import React from 'react'
-import { UseCart } from "./CartContext"
+import { UseCart } from "../../Provider/CartContext"
 import { Card, Container, Row, Col, ListGroupItem, ListGroup, Button } from 'react-bootstrap';
-import Counter from "./Counter"
 
 export default function CartDetail() {
 

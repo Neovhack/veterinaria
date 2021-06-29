@@ -4,7 +4,7 @@ import Home from '../pages/Home'
 import Products from '../pages/Products'
 import NavBar from "../components/NavBar/NavBar"
 import ProductsDetail from '../components/ItemlistContainer/ProductsDetail'
-import CartContext from "../components/ItemlistContainer/CartContext"
+import CartContext from "../Provider/CartContext"
 import CartDetail from "../components/ItemlistContainer/CartDetail"
 
 export default function AppRouter() {
