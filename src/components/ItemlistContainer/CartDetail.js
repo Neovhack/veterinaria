@@ -7,6 +7,7 @@ export default function CartDetail() {
 
   const { cart } = UseCart();
   const { removeItem } = UseCart();
+
   return (
     <Container>
       <Row>
@@ -26,7 +27,7 @@ export default function CartDetail() {
                       </ListGroupItem>
                     
                       <ListGroupItem className="mx-auto">
-                        Cantidad:   <Counter dato={product} />                   
+                        Cantidad:    {product.quantity}                 
                       </ListGroupItem>
                       <ListGroupItem className="mx-auto">
                       <Button onClick={() => removeItem(product)} variant="primary">

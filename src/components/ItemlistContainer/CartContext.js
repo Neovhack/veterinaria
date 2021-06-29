@@ -9,18 +9,18 @@ export function UseCart() {
 export function CartContext({ children }) {
     const [cart, setCart] = useState([]);
     //agregar al carrito o agregar cantidad en caso de repetido
-    function addToCart(obj) {
+    function addToCart(obj,cantidad) {
 
         const selectedProduct = {
             "id" : obj.id,
             "name" : obj.name,
             "price" : obj.price,
             "pictureURL" : obj.pictureURL,
-            "quantity" : 1
+            "quantity" : cantidad
         }
     
          let repetidos =  cart.find(element => element.id == obj.id);
-         (typeof repetidos == "object") ? repetidos.quantity = repetidos.quantity + 1 : setCart([...cart, selectedProduct])
+         (typeof repetidos == "object") ? repetidos.quantity = repetidos.quantity + cantidad : setCart([...cart, selectedProduct])
     }
     //Eliminar del carrito
     function removeItem (obj) {
