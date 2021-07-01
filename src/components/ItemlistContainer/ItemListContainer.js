@@ -1,13 +1,13 @@
+
 import React, { createContext } from 'react';
 import CardList from "./CardList"
-import dataProductos from "../../datosProductos.json"
+import { UseData } from "../../Provider/DataContext"
 export const dataContext = createContext();
 
 
 function ItemListContainer() {
     //Promesa para traer datos de apis
-
-   const data = dataProductos
+    const { data } = UseData();
 
     return (
         <>

@@ -1,17 +1,15 @@
 import React from 'react'
 import { NavLink, useParams } from "react-router-dom"
 import { Card, Container, Row, Col, Button, ListGroupItem, ListGroup } from 'react-bootstrap';
-import dataProductos from "../../datosProductos.json"
+import { UseData } from "../../Provider/DataContext"
 import Counter from "./Counter"
 
 function ProductsDetail() {
     //Traigo datos del producto seleccionado
     const { itemId } = useParams();
-    const datosItem = dataProductos.find(elemento => elemento.id == itemId)
+    const { data } = UseData();
+    const datosItem = data.find(elemento => elemento.id == itemId)
 
-
-   
-   
     return (
         //HTML del producto seleccionado
         <Container>

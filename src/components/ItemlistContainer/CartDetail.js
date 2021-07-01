@@ -10,12 +10,12 @@ export default function CartDetail() {
 
   return (
     <Container>
-      
-        {
-          cart.length !== 0 ?
-            cart.map((product, index) => {
-              return (
-                <Row>
+
+      {
+        cart.length !== 0 ?
+          cart.map((product, index) => {
+            return (
+              <Row>
                 <Col key={index}>
                   <Card style={{ width: "18rem" }}>
                     <Card.Img variant="top" src={product.pictureURL} />
@@ -37,22 +37,22 @@ export default function CartDetail() {
                     </ListGroup>
                   </Card>
                 </Col>
-                </Row>
-              )
-            }) :
-            <>
+              </Row>
+            )
+          }) :
+          <>
             <Row>
               <h5 className="p-4 m-auto"> No hay Productos seleccionados, Vuelva a la tienda!</h5>
-              </Row>
-              <Row >
+            </Row>
+            <Row >
               <NavLink className="m-auto" exact to={"/Products"}>
                 <Button>
                   Volver
                 </Button>
               </NavLink>
-              </Row>
-            </>
-        }
+            </Row>
+          </>
+      }
     </Container>
   )
 }

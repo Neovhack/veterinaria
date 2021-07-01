@@ -23,11 +23,6 @@ export function CartContext({ children }) {
          (typeof repetidos == "object") ? repetidos.quantity = repetidos.quantity + cantidad : setCart([...cart, selectedProduct])
     }
     //Eliminar del carrito
-    /*
-    function removeItem (obj) {
-       let index = cart.indexOf(cart.find(element => element.id == obj.id)) ;
-       cart.splice(index, 1);
-    }*/
     function removeItem (obj) {
         let removeItem = cart.filter(function (objeto){
             return objeto.id !== obj.id
