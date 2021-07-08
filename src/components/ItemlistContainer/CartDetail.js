@@ -10,12 +10,12 @@ export default function CartDetail() {
 
   return (
     <Container>
-
+       <Row>
       {
         cart.length !== 0 ?
           cart.map((product, index) => {
             return (
-              <Row>
+             
                 <Col key={index}>
                   <Card style={{ width: "18rem" }}>
                     <Card.Img variant="top" src={product.pictureURL} />
@@ -30,6 +30,13 @@ export default function CartDetail() {
                         Cantidad: {product.quantity}
                       </ListGroupItem>
                       <ListGroupItem className="mx-auto">
+                      <NavLink className="m-auto" exact to={"/Products/Buy"}>                       
+                          <Button variant="primary">
+                            Terminar Compra
+                          </Button>                  
+                      </NavLink>
+                      </ListGroupItem>
+                      <ListGroupItem className="mx-auto">
                         <Button onClick={() => removeItem(product)} variant="primary">
                           Eliminar del Carrito
                         </Button>
@@ -37,7 +44,7 @@ export default function CartDetail() {
                     </ListGroup>
                   </Card>
                 </Col>
-              </Row>
+           
             )
           }) :
           <>
@@ -52,7 +59,7 @@ export default function CartDetail() {
               </NavLink>
             </Row>
           </>
-      }
+      }   </Row>
     </Container>
   )
 }

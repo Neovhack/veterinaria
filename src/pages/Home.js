@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {getFireStore} from "../FireBase/api"
 
 function Home() {
+
     return (
         //Home
         <div>

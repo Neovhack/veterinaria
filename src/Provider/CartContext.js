@@ -30,8 +30,16 @@ export function CartContext({ children }) {
         setCart(removeItem);
     }
 
+    function getTotal() {
+        var total = 0;
+        cart.forEach(element => {
+           total= total + element.price * element.quantity
+        });
+        return total
+    }
+
     return (
-        <CartCreateContext.Provider value={{ cart, addToCart, removeItem }}>
+        <CartCreateContext.Provider value={{ cart,setCart, addToCart, removeItem, getTotal }}>
             {children}
         </CartCreateContext.Provider>
     )

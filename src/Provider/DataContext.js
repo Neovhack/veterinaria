@@ -28,8 +28,6 @@ export function DataContext({ children }) {
              }
          ).catch((error) => {console.log("Error searching items", error)}).finally(() => {setLoading(false)})  
      }, [])
- 
-   
     
     return (
       <DataCreateContext.Provider value={{data}}>
